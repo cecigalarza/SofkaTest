@@ -1,0 +1,23 @@
+## Conclusiones del Proyecto de Prueba E2E en DemoBlaze
+
+### Hallazgos Principales:
+
+1.  **Implementación Parcial del Flujo E2E:** Se automatizo el flujo de compra completo en la página DemoBlaze, desde la selección de productos hasta la antes de la confirmación de la compra.
+2.  **Utilización Efectiva del Page Object Model (POM):** La implementación del POM facilitó la organización y el mantenimiento del código, mejorando la reutilización y la legibilidad.
+3.  **Manejo de Errores y Excepciones:** Se identificaron y abordaron varios desafíos, como la incompatibilidad del ChromeDriver, problemas de visibilidad de elementos y la gestión de alertas.
+4.  **Aprendizaje en la Resolución de Problemas:** Se adquirieron habilidades valiosas en la resolución de problemas relacionados con la configuración del entorno, la interacción con elementos web y la gestión de dependencias en Maven.
+
+### Conclusiones Clave:
+
+1.  **Importancia de las Esperas Explícitas:** El uso de esperas explícitas es fundamental para asegurar que los elementos web estén completamente cargados y sean interactuables antes de intentar interactuar con ellos.
+2.  **Beneficios de WebDriverManager:** WebDriverManager simplifica enormemente la gestión de los drivers de los navegadores, evitando problemas de compatibilidad y facilitando la configuración del entorno.
+3.  **Versatilidad del Lenguaje JavaScript:** La capacidad de ejecutar JavaScript directamente en el navegador es una herramienta valiosa para sortear problemas de visibilidad y habilitación de elementos.
+4.  **Valor del Page Object Model:** El POM facilita la organización y el mantenimiento del código, lo que permite adaptarse a los cambios en la interfaz de usuario de manera más eficiente.
+5.  **Enfoque Iterativo y Proactivo:** La clave para el éxito en la automatización de pruebas es un enfoque iterativo y proactivo, que implica identificar y abordar los problemas a medida que surgen.
+
+### Lecciones Aprendidas:
+
+1.  La importancia de una configuración inicial precisa y la gestión adecuada de las dependencias.
+2.  La necesidad de una comprensión profunda de los selectores y las técnicas de interacción de Selenium.
+3.  El valor de una comunicación clara y efectiva para colaborar en la resolución de problemas
+
