@@ -1,0 +1,96 @@
+¡HOLA! Aquí puedes ver una versión extendida del README, incorporando los detalles de la prueba E2E y las soluciones que he implementado:
+
+# Prueba Automatizada E2E en DemoBlaze con Selenium y JUnit
+
+Este proyecto implementa una prueba funcional automatizada de extremo a extremo (E2E) para el flujo de compra en la página [https://www.demoblaze.com/](https://www.demoblaze.com/). Utiliza Selenium WebDriver con JUnit para simular la interacción del usuario al agregar productos al carrito, completar el formulario de compra y finalizar la compra.
+
+## Tabla de Contenidos
+
+1.  [Descripción](#descripción)
+2.  [Pre-requisitos](#pre-requisitos)
+3.  [Instalación](#instalación)
+4.  [Ejecución](#ejecución)
+5.  [Configuración del Entorno](#configuración-del-entorno)
+6.  [Implementación del Page Object Model (POM)](#implementación-del-page-object-model-pom)
+7.  [Resolución de Problemas](#resolución-de-problemas)
+8.  [Licencia](#licencia)
+
+## Descripción
+
+Este proyecto tiene como objetivo automatizar el flujo de compra en la página DemoBlaze, desde la selección de productos hasta la confirmación de la compra. Se utiliza Selenium WebDriver para simular las acciones del usuario y JUnit para verificar que el flujo se complete correctamente.
+
+## Pre-requisitos
+
+Antes de ejecutar este proyecto, asegúrate de tener instalado lo siguiente:
+
+*   **Java Development Kit (JDK):** Versión 17 o superior.
+    *   Verificar la instalación: `java -version`
+*   **Maven:** Versión 3.9.9 o superior.
+    *   Verificar la instalación: `mvn -version`
+*   **Navegador Chrome:** Versión compatible con el ChromeDriver.
+*   **ChromeDriver:** Configurado para Selenium. WebDriverManager se encarga de esto automáticamente.
+*   **Editor de Código:** IDE de preferencia, puede ser IntelliJ IDEA o VSCode.
+
+## Instalación
+
+1.  **Clonar el repositorio:**
+git clone https://github.com/cecigalarza/SofkaTest/
+
+
+2.  **Navegar al directorio del proyecto:**
+cd PruebaE2E
+
+
+3.  **Compilar el proyecto con Maven:**
+mvn clean install
+
+
+## Ejecución
+
+1.  **Ejecutar las pruebas con Maven:**
+mvn test
+
+
+Este comando ejecutará todas las pruebas JUnit en el proyecto.
+
+## Configuración del Entorno
+
+1.  **Configurar las Variables de Entorno:**
+
+    *   Asegúrate de que las variables de entorno `JAVA_HOME` y `PATH` estén configuradas correctamente.
+    *   `JAVA_HOME` debe apuntar al directorio de instalación del JDK.
+    *   `PATH` debe incluir el directorio `bin` de la instalación de Maven.
+
+2.  **Descargar e Instalar ChromeDriver:**
+
+    *   WebDriverManager se encarga de descargar la versión correcta del ChromeDriver. No es necesario descargar el ChromeDriver manualmente.
+
+## Implementación del Page Object Model (POM)
+
+Este proyecto utiliza el Page Object Model (POM) para organizar el código de prueba. Los siguientes Page Objects están definidos:
+
+*   **`HomePage`:** Representa la página principal y contiene métodos para navegar a la página y seleccionar productos.
+*   **`ProductPage`:** Representa la página de un producto y contiene métodos para agregar el producto al carrito y aceptar la alerta.
+*   **`CartPage`:** Representa la página del carrito y contiene métodos para navegar a la página, obtener el nombre de un producto en el carrito y hacer clic en el botón "Place Order".
+*   **`CheckoutPage`:** Representa el formulario de compra y contiene métodos para llenar el formulario y hacer clic en el botón "Purchase".
+*   **`ConfirmationDialog`:** Representa el diálogo de confirmación de la compra y contiene métodos para obtener el mensaje de confirmación y hacer clic en el botón "OK".
+
+## Resolución de Problemas
+
+1.  **ChromeDriver Incompatible:**
+
+    *   **Problema:** `org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created: This version of ChromeDriver only supports Chrome version XXX`
+    *   **Solución:** WebDriverManager gestiona automáticamente la versión correcta del ChromeDriver. Si este problema persiste, intenta forzar la actualización del ChromeDriver con WebDriverManager.
+
+2.  **ElementNotInteractableException:**
+
+    *   **Problema:** `org.openqa.selenium.ElementNotInteractableException: element not interactable`
+    *   **Solución:** Este error ocurre cuando Selenium no puede interactuar con un elemento. Aquí hay varias soluciones:
+        *   Asegúrate de que el elemento esté visible y habilitado antes de intentar interactuar con él. Utiliza esperas explícitas con `WebDriverWait` y `ExpectedConditions`.
+        *   Si el elemento está oculto o superpuesto, utiliza JavaScript para modificar el estilo del elemento y hacerlo visible antes de intentar interactuar con él.
+
+## Licencia
+
+NA
+
+¡Gracias por leer!
