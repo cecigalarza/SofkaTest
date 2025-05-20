@@ -1,0 +1,28 @@
+# Pruebas de Servicios REST con Karate para DemoBlaze - Por Cecilia Galarza
+
+## Descripción General
+
+En este proyecto, he implementado pruebas automatizadas para los servicios REST de registro (signup) y login de la página [https://www.demoblaze.com/](https://www.demoblaze.com/), utilizando el framework Karate.
+
+Mi objetivo fue verificar el correcto funcionamiento de los endpoints `/signup` y `/login` en diferentes escenarios. Las pruebas incluyen:
+
+*   Crear un nuevo usuario en signup (éxito)
+*   Intentar crear un usuario ya existente (error)
+*   Usuario y password correcto en login (éxito)
+*   Usuario y password incorrecto en login (error)
+
+## Pre-requisitos
+
+Antes de ejecutar estas pruebas, asegúrate de tener instalado lo siguiente:
+
+*   **Java Development Kit (JDK):** Versión 11
+    *   Verificar la instalación: `java -version`
+*   **Maven:** Versión 3.9.9
+    *   Verificar la instalación: `mvn -version`
+
+## Instrucciones de Ejecución
+
+1.  **Clonar el repositorio:**
+
+bash
+git clone <URL_del_repositorio>
