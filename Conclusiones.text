@@ -1,0 +1,8 @@
+Conclusiones
+En este proyecto, he logrado:
+
+Crear la estructura del proyecto: Se ha organizado el proyecto de manera clara y siguiendo las convenciones de Maven, separando el código de prueba de los recursos y la configuración.
+Realizar configuraciones previas para el funcionamiento del test: Se han configurado correctamente las dependencias de Karate y JUnit, así como los plugins necesarios para ejecutar las pruebas.
+Realizar la prueba con el enunciado dado: A pesar de ser la primera vez que utilizo Karate, he sido capaz de implementar las pruebas para los servicios REST de registro y login, siguiendo las instrucciones proporcionadas.
+Hallazgos
+Siempre verifica que los archivos se estén ejecutando de la forma correcta y no tener dependencias incorrectas.
